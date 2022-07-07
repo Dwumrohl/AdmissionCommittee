@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://contactEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="contactDc"
+                  class="com.company.admissioncommittee.entity.Contact">
+            <fetchPlan extends="_base">
+                <property name="regAddress" fetchPlan="_base"/>
+                <property name="realAddress" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="windowCommitAndClose" caption="msg:///actions.Ok"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="scrollBox">
+        <scrollBox id="scrollBox" spacing="true">
+            <form id="form" dataContainer="contactDc">
+                <column width="350px">
+                    <textField id="phoneNumberField" property="phoneNumber"/>
+                    <textField id="secondPhoneNumberField" property="secondPhoneNumber"/>
+                    <split orientation="vertical" height="100px" width="500px" maxSplitPosition="50%" minSplitPosition="50%"/>
+                    <label css="padding-bottom: 20px; font-size: 20pt; font-weight: bold" value="msg://com.company.admissioncommittee.entity/Contact.regAddress"/>
+                    <textField id="regAddressCountryField" property="regAddress.country"/>
+                    <textField id="regAddressRegionField" property="regAddress.region"/>
+                    <textField id="regAddressCityField" property="regAddress.city"/>
+                    <textField id="regAddressStreetField" property="regAddress.street"/>
+                    <textField id="regAddressHouseField" property="regAddress.house"/>
+                    <textField id="regAddressBuildingField" property="regAddress.building"/>
+                    <textField id="regAddressApartmentField" property="regAddress.apartment"/>
+                    <textField id="regAddressIndexField" property="regAddress.index"/>
+                    <split orientation="vertical" height="100px" width="500px" maxSplitPosition="50%" minSplitPosition="50%"/>
+                    <label css="padding-bottom: 20px; font-size: 20pt; font-weight: bold" value="msg://com.company.admissioncommittee.entity/Contact.realAddress"/>
+                    <textField id="realAddressCountryField" property="realAddress.country"/>
+                    <textField id="realAddressRegionField" property="realAddress.region"/>
+                    <textField id="realAddressCityField" property="realAddress.city"/>
+                    <textField id="realAddressStreetField" property="realAddress.street"/>
+                    <textField id="realAddressHouseField" property="realAddress.house"/>
+                    <textField id="realAddressBuildingField" property="realAddress.building"/>
+                    <textField id="realAddressApartmentField" property="realAddress.apartment"/>
+                    <textField id="realAddressIndexField" property="realAddress.index"/>
+                </column>
+            </form>
+        </scrollBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

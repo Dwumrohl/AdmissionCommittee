@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="AdmissionCommittee">
+        <addColumn tableName="STUDENT">
+            <column name="DOCUMENTS_DOC_INN" type="INT"/>
+            <column name="DOCUMENTS_DOC_SNILS" type="INT"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="2" author="AdmissionCommittee">
+        <addColumn tableName="STUDENT">
+            <column name="DOCUMENTS_PASSPORT" type="VARCHAR(255)"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="DOCUMENTS_PASSPORT" defaultNullValue="''" tableName="STUDENT"/>
+    </changeSet>
+</databaseChangeLog>

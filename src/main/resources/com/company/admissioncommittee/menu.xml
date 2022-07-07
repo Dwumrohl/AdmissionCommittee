@@ -4,6 +4,16 @@
     <menu id="application" caption="msg://com.company.admissioncommittee/menu.application" insertBefore="administration">
         <item screen="User.browse" caption="msg://com.company.admissioncommittee.screen.user/UserBrowse.caption"/>
         <item screen="themeSettingsScreen" caption="msg://io.jmix.ui.app.themesettings/themeSettings.caption"/>
+        <item screen="Contact.browse" caption="msg://com.company.admissioncommittee.screen.contact/contactBrowse.menu"/>
+        <item screen="ExamResult.browse"
+              caption="msg://com.company.admissioncommittee.screen.examresult/examResultBrowse.menu"/>
+        <item screen="Student.browse" caption="msg://com.company.admissioncommittee.screen.student/studentBrowse.menu"/>
+        <item screen="Branch.browse" caption="msg://com.company.admissioncommittee.screen.branch/branchBrowse.menu"/>
+        <item screen="PreferedBranch.browse"
+              caption="msg://com.company.admissioncommittee.screen.preferedbranch/preferedBranchBrowse.menu"/>
+        <item screen="Rating.browse" caption="msg://com.company.admissioncommittee.screen.rating/ratingBrowse.menu"/>
+        <item screen="AdmissionCampaign.browse"
+              caption="msg://com.company.admissioncommittee.screen.admissioncampaign/admissionCampaignBrowse.menu"/>
     </menu>
 
 </menu-config>

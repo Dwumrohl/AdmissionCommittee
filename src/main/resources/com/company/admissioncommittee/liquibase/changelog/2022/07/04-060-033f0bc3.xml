@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="AdmissionCommittee">
+        <dropColumn columnName="real_address_apartment" tableName="contact"/>
+
+        <dropColumn columnName="real_address_building" tableName="contact"/>
+
+        <dropColumn columnName="real_address_city" tableName="contact"/>
+
+        <dropColumn columnName="real_address_country" tableName="contact"/>
+
+        <dropColumn columnName="real_address_house" tableName="contact"/>
+
+        <dropColumn columnName="real_address_index_" tableName="contact"/>
+
+        <dropColumn columnName="real_address_region" tableName="contact"/>
+
+        <dropColumn columnName="real_address_street" tableName="contact"/>
+    </changeSet>
+</databaseChangeLog>

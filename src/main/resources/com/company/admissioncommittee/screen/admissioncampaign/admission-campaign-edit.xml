@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://admissionCampaignEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="admissionCampaignDc"
+                  class="com.company.admissioncommittee.entity.AdmissionCampaign">
+            <fetchPlan extends="_base">
+                <property name="branches" fetchPlan="_base"/>
+                <property name="rating" fetchPlan="_base">
+                    <property name="students">
+                        <property name="lastName"/>
+                        <property name="firstName"/>
+                        <property name="patronymic"/>
+                        <property name="summPoints"/>
+                        <property name="prefered" fetchPlan="_base"/>
+                    </property>
+                </property>
+            </fetchPlan>
+            <loader/>
+            <collection id="branchesDc" property="branches"/>
+            <collection id="ratingDc" property="rating"/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="windowCommitAndClose" caption="msg:///actions.Ok"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="editActions">
+        <form id="form" dataContainer="admissionCampaignDc">
+            <column width="350px">
+                <textField id="yearField" property="year"/>
+            </column>
+        </form>
+        <groupBox id="branchesBox" caption="msg://com.company.admissioncommittee.entity/AdmissionCampaign.branches">
+            <table id="branchesTable" dataContainer="branchesDc" width="100%" height="200px">
+                <actions>
+                    <action id="add" type="add"/>
+                    <action id="exclude" type="exclude"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                    <column id="code"/>
+                    <column id="budgetPlaces"/>
+                    <column id="minimalScore"/>
+                </columns>
+                <buttonsPanel>
+                    <button action="branchesTable.add"/>
+                    <button action="branchesTable.exclude"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <groupBox id="ratingBox" caption="msg://com.company.admissioncommittee.entity/AdmissionCampaign.rating">
+            <table id="ratingTable" dataContainer="ratingDc" width="100%" height="200px">
+                <actions>
+                    <action id="create" type="create"/>
+                    <action id="edit" type="edit"/>
+                    <action id="remove" type="remove"/>
+                </actions>
+                <columns>
+                    <column id="branch"/>
+                </columns>
+                <buttonsPanel>
+                    <button action="ratingTable.create"/>
+                    <button action="ratingTable.edit"/>
+                    <button action="ratingTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
