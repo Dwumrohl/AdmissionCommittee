@@ -44,6 +44,39 @@ public class BranchService {
             currentAuthentication.getUser();
             return "Done";
         });
+        List<Student> students = dataManager.load(Student.class).query("select s "+
+                        "from Student s")
+                .list();
+        for (Student stud:
+             students) {
+            ArrayList<Branch> branches = new ArrayList<>();
+            stud.getPrefered().forEach(preferedBranch -> {branches.add(preferedBranch.getBranch());});
+            List<Rating> ratings = dataManager.load(Rating.class).query("select r "+
+                            "from Rating r where r.branch in ?1 and r.admissionCampaign.year=?2",branches,Calendar.getInstance().get(Calendar.YEAR))
+                    .list();
+            for (Branch branch:
+                    branches) {
+                for (Rating rat:
+                        ratings) {
+                    if (rat.getBranch().equals(branch)) {
+                        rat.getStudents().size();
+                        List<Student> temp;
+                        temp = rat.getStudents();
+                        temp.add(stud);
+                        rat.setStudents(temp);
+                        try {
+                            dataManager.save(rat);
+                        } catch (Exception ex) {
+                            System.out.println(ex.getStackTrace());
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void fillStudentInRating(){
         Student stud = dataManager.load(Student.class).query("select s "+
                         "from Student s")
                 .sort(Sort.by(Sort.Direction.DESC,"lastModifiedDate"))
@@ -72,10 +105,6 @@ public class BranchService {
                 }
             }
         }
-    }
-
-    public void fillStudentInRating(){
-
     }
 
     public void fillBranchInRating(){
