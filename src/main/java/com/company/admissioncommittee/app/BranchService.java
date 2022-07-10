@@ -58,8 +58,8 @@ public class BranchService {
                     branches) {
                 for (Rating rat:
                         ratings) {
-                    if (rat.getBranch().equals(branch)) {
-                        rat.getStudents().size();
+                    rat.getStudents().size();
+                    if (rat.getBranch().equals(branch) && !rat.getStudents().contains(stud)) {
                         List<Student> temp;
                         temp = rat.getStudents();
                         temp.add(stud);
@@ -90,8 +90,8 @@ public class BranchService {
                 branches) {
             for (Rating rat:
                     ratings) {
-                if (rat.getBranch().equals(branch)) {
-                    rat.getStudents().size();
+                rat.getStudents().size();
+                if (rat.getBranch().equals(branch) && !rat.getStudents().contains(stud)) {
                     List<Student> temp;
                     temp = rat.getStudents();
                     temp.add(stud);

@@ -70,9 +70,10 @@ public class Branch {
 
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "branch")
     private Rating rating;
+
     @JoinTable(name = "ADMISSION_CAMPAIGN_BRANCH_LINK",
-            joinColumns = @JoinColumn(name = "BRANCH_ID"),
-            inverseJoinColumns = @JoinColumn(name = "ADMISSION_CAMPAIGN_ID"))
+            joinColumns = @JoinColumn(name = "BRANCH_ID", referencedColumnName = "ID"),
+            inverseJoinColumns = @JoinColumn(name = "ADMISSION_CAMPAIGN_ID", referencedColumnName = "ID"))
     @ManyToMany
     private List<AdmissionCampaign> admissionCampaigns;
 
