@@ -189,25 +189,25 @@
             <column name="admission_campaign_id" value="e5f0471a-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f05b42-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f03f68-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f0471a-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f05c28-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f04292-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f0471a-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f05d04-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f04634-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f0471a-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f05de0-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f04544-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f0471a-0033-11ed-b939-0242ac120002"/>
@@ -215,31 +215,31 @@
 
 
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f05ec6-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f03d9c-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f04634-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f05f98-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f03f68-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f04634-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f0607e-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f04292-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f04634-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f062b8-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f04634-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f04634-0033-11ed-b939-0242ac120002"/>
         </insert>
         <insert tableName="rating">
-            <column name="ID" value="e5f04800-0033-11ed-b939-0242ac120002"/>
+            <column name="ID" value="e5f0639e-0033-11ed-b939-0242ac120002"/>
             <column name="VERSION" value="1"/>
             <column name="BRANCH_ID" value="e5f04544-0033-11ed-b939-0242ac120002"/>
             <column name="admission_campaign_id" value="e5f04634-0033-11ed-b939-0242ac120002"/>
